@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(
   cors({
     origin:
-      "https://cloudcomputing3333-bsg7fye5hne0erhu.francecentral-01.azurewebsites.net/", // Adjust as needed for your frontend
+      "https://cloudcomputing3333-bsg7fye5hne0erhu.francecentral-01.azurewebsites.net", // Adjust as needed for your frontend
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
