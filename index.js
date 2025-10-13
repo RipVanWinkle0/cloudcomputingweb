@@ -3,7 +3,6 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import morgan from 'morgan';
 import helmet from 'helmet';
-import routes from './routes';
 
 const app = express();
 
@@ -11,8 +10,11 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(morgan('combined'));
 app.use(helmet());
-app.use('/api', routes);
+app.use(express.static('public'));
 
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 export default app;
 export const PORT = process.env.PORT || 3000;
 
